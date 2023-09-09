@@ -1,2 +1,2 @@
-oh-my-posh init nu --config "~/posh_theme.json"
+oh-my-posh init nu --config "~/Repos/posh_theme.json"
 
