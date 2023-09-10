@@ -1,2 +1,3 @@
-oh-my-posh init nu --config "~/Repos/posh_theme.json"
+$env.EDITOR = "nvim"
+oh-my-posh init nu --config "~/Repos/nu_stuff/posh_theme.json"
 
