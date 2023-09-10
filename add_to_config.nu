@@ -1,10 +1,10 @@
 source ~/.oh-my-posh.nu
     
-use ~/Repos/nu_stuff/cargo-completions.nu *
-use ~/Repos/nu_stuff/git-completions.nu *
-use ~/Repos/nu_stuff/man-completions.nu *
+use ~/.config/nu_stuff/cargo-completions.nu *
+use ~/.config/nu_stuff/git-completions.nu *
+use ~/.config/nu_stuff/man-completions.nu *
     
-source ~/Repos/nu_stuff/git-aliases.nu
+source ~/.config/nu_stuff/git-aliases.nu
     
-use ~/Repos/nu_stuff/monokai-dark.nu
+use ~/.config/nu_stuff/monokai-dark.nu
 $env.config = ($env.config | merge {color_config: (monokai-dark)})
