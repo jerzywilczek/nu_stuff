@@ -1,4 +1,8 @@
 
+def "nu-complete git add" [] {
+  ^git status --short | lines | parse -r "^.. (?<value>.*)$"
+}
+
 def "nu-complete git available upstream" [] {
   ^git branch -a | lines | each { |line| $line | str replace '\* ' "" | str trim }
 }
@@ -345,6 +349,7 @@ export extern "git reflog" [
 
 # Stage files
 export extern "git add" [
+  ...files: path@"nu-complete git add"                # files to stage
   --patch(-p)                                         # interactively choose hunks to stage
 ]
 
