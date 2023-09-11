@@ -1,3 +1,10 @@
+def up [] {
+    sudo nala upgrade
+    flatpak update
+    flatpak uninstall --unused
+    cargo install-update -a
+}
+
 source ~/.oh-my-posh.nu
     
 use ~/.config/nu_stuff/cargo-completions.nu *
