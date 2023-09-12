@@ -5,6 +5,18 @@ def up [] {
     cargo install-update -a
 }
 
+def "refresh config" [] {
+    nu $'($env.NU_STUFF_PATH)/clean_install.nu'
+}
+
+# get the du output for the children of this folder, 
+# highest to lowest size
+def "child sizes" [
+    folder: path                               # folder to check
+]: nothing -> table {
+    glob $'($folder)/*' | each {|p| du $p} | flatten | sort-by -r physical
+}
+
 source ~/.oh-my-posh.nu
     
 use ~/.config/nu_stuff/cargo-completions.nu *
