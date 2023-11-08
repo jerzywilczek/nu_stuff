@@ -1,5 +1,10 @@
 def up [] {
-    sudo nala upgrade
+    if ((sys | get host.name) == "Arch Linux") {
+        paru
+    } else {
+        sudo nala upgrade
+    }
+    
     flatpak update
     flatpak uninstall --unused
     cargo install-update -a

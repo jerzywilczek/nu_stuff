@@ -72,7 +72,7 @@
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
-	  "template": " \ue7a8{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+	  "template": " \ue7a8 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
           "type": "rust"
         },
         {
