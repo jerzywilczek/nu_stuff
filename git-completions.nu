@@ -4,7 +4,7 @@ def "nu-complete git add" [] {
 }
 
 def "nu-complete git available upstream" [] {
-  ^git branch -a | lines | each { |line| $line | str replace '\* ' "" | str trim }
+  ^git branch -a | lines | each { |line| $line | str replace "* " "" | str trim }
 }
 
 def "nu-complete git remotes" [] {
@@ -28,7 +28,7 @@ def "nu-complete git commits current branch" [] {
 
 # Yield local branches like `main`, `feature/typo_fix`
 def "nu-complete git local branches" [] {
-  ^git branch | lines | each { |line| $line | str replace '\* ' "" | str trim }
+  ^git branch | lines | each { |line| $line | str replace "* " "" | str trim }
 }
 
 # Yield remote branches like `origin/main`, `upstream/feature-a`
